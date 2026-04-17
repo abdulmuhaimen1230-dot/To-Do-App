@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Flow | To-Do</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-panel" class="container">
+        <h2>Modern Flow</h2>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email Address">
+        <input type="password" id="password" placeholder="Create Password">
+        <button onclick="handleSignup()">Get Started</button>
+    </div>
+
+    <div id="todo-panel" class="container" style="display:none;">
+        <h2 id="user-display">Your Tasks</h2>
+        <div class="input-row">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="list-area"></ul>
+        <button onclick="handleLogout()" class="logout-btn">Log Out</button>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
